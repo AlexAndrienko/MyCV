@@ -1,0 +1,27 @@
+{
+  "name": "cv",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev": "postcss -c postcss.config.js -o dist/index.css css/*.css -w",
+    "start": "webpack-dev-server --mode development",
+    "build": "postcss -c postcss.config.js -o dist/index.css css/*.css"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "autoprefixer": "^9.7.4",
+    "postcss": "^7.0.27",
+    "postcss-cli": "^7.1.0",
+    "postcss-extend": "^1.0.5",
+    "postcss-import": "^12.0.1",
+    "postcss-loader": "^3.0.0",
+    "postcss-mixins": "^6.2.3",
+    "postcss-nested": "^4.2.1",
+    "postcss-simple-vars": "^5.0.2",
+    "postcss-url": "^8.0.0",
+    "stylelint-config-recommended": "^3.0.0",
+    "webpack-dev-server": "^3.10.3"
+  }
+}
