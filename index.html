@@ -7,10 +7,7 @@
     <meta name=viewport content=width=device-width,initial-scale=1>
     <link rel=stylesheet type="text/css" href="./dist/index.css">
 
-    <!-- Load d3.js -->
     <script src="https://d3js.org/d3.v4.js"></script>
-
-    <!-- Load d3-cloud -->
     <script src="https://cdn.jsdelivr.net/gh/holtzy/D3-graph-gallery@master/LIB/d3.layout.cloud.js"></script>
 </head>
 
@@ -19,26 +16,24 @@
     <script>
 
         document.addEventListener('DOMContentLoaded', (event) => {
-            // , ,  / ,  / , , , , EJB, log4j, SOA, Web Services,  / , ASP.Net MVC, ,
-            //  HTML 5, , JavaScript, , CoffeeScript, Backbone.js, , CSS / CSS3, SQL / PLSQL, WebSphere ESB, IBM BPM.
-            let s = 30;
-            // List of words
+            let scale = 30;
+            // List of tags
             let myWords = [
-                { word: "Java", size: s * 1 },
-                { word: "J2EE", size: s * 0.7 },
-                { word: "JSP", size: s * 0.8 },
-                { word: "Servlets", size: s * 0.7 },
-                { word: "Struts", size: s * 0.6 },
-                { word: "JSF", size: s * 0.5 },
-                { word: "JDBC", size: s * 0.6 },
-                { word: "JPA", size: s * 0.4 },
-                { word: ".Net", size: s * 0.3 },
-                { word: "ASP.Net", size: s * 0.7 },
-                { word: "jQuery", size: s * 1 },
-                { word: "XML", size: s * 0.9 },
-                { word: "C#", size: s * 0.9 },
-                { word: "MySQL", size: s * 0.8 },
-                { word: "PostgreSQL", size: s * 0.5 },
+                { word: "Java", size: scale * 1 },
+                { word: "J2EE", size: scale * 0.7 },
+                { word: "JSP", size: scale * 0.8 },
+                { word: "Servlets", size: scale * 0.7 },
+                { word: "Struts", size: scale * 0.6 },
+                { word: "JSF", size: scale * 0.5 },
+                { word: "JDBC", size: scale * 0.6 },
+                { word: "JPA", size: scale * 0.4 },
+                { word: ".Net", size: scale * 0.3 },
+                { word: "ASP.Net", size: scale * 0.7 },
+                { word: "jQuery", size: scale * 1 },
+                { word: "XML", size: scale * 0.9 },
+                { word: "C#", size: scale * 0.9 },
+                { word: "MySQL", size: scale * 0.8 },
+                { word: "PostgreSQL", size: scale * 0.5 },
             ]
 
             // set the dimensions and margins of the graph
@@ -47,7 +42,7 @@
                 height = 200 - margin.top - margin.bottom;
 
             // append the svg object to the body of the page
-            let svg = d3.select("#my_dataviz")
+            let svg = d3.select("#tag-cloud")
                 .append("svg")
                 .attr("width", width + margin.left + margin.right)
                 .attr("height", height + margin.top + margin.bottom)
@@ -129,13 +124,6 @@
                     <ul>
                         <li>
                             EcmaScript 2019 (ES6+)
-                            <!-- <div>
-                        <i class="icon-record"></i>
-                        <i class="icon-record"></i>
-                        <i class="icon-record"></i>
-                        <i class="icon-record"></i>
-                        <i class="icon-android-radio-button-off"></i>
-                    </div> -->
                         </li>
                         <li>HTML 5</li>
                         <li>CSS 3</li>
@@ -149,7 +137,7 @@
                     </ul>
 
                     <b>Previously worked with</b>
-                    <div id="my_dataviz"></div>
+                    <div id="tag-cloud"></div>
                 </section>
 
                 <section class="experience">
@@ -184,7 +172,6 @@
                                 storage.
                             </p>
                         </div>
-                        <!-- //////////////////////////////////////// -->
                         <!-- //////////////////////////////////////// -->
                         <div class="job__project">
                             <h1 class="title">

@@ -1,14 +1,14 @@
 {
     "name": "cv",
     "version": "1.0.0",
-    "description": "",
+    "description": "10 years of my life",
     "main": "index.js",
     "scripts": {
         "dev": "postcss -c postcss.config.js -o dist/index.css css/*.scss -w",
         "build": "postcss -c postcss.config.js -o dist/index.css css/*.scss",
         "inline": "html-inline -i index.html -o dist/index.html"
     },
-    "author": "",
+    "author": "Alex Andrienko",
     "license": "ISC",
     "devDependencies": {
         "autoprefixer": "^9.7.4",
@@ -24,8 +24,6 @@
         "postcss-nested": "^4.2.1",
         "postcss-scss": "^2.0.0",
         "postcss-simple-vars": "^5.0.2",
-        "postcss-url": "^8.0.0",
-        "stylelint-config-recommended": "^3.0.0",
-        "webpack-dev-server": "^3.10.3"
+        "postcss-url": "^8.0.0"
     }
 }
