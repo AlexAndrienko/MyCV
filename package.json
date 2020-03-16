@@ -5,13 +5,14 @@
     "main": "index.js",
     "scripts": {
         "dev": "postcss -c postcss.config.js -o dist/index.css css/*.scss -w",
-        "start": "webpack-dev-server --mode development",
-        "build": "postcss -c postcss.config.js -o dist/index.css css/*.scss"
+        "build": "postcss -c postcss.config.js -o dist/index.css css/*.scss",
+        "inline": "html-inline -i index.html -o dist/index.html"
     },
     "author": "",
     "license": "ISC",
     "devDependencies": {
         "autoprefixer": "^9.7.4",
+        "html-inline": "^1.2.0",
         "postcss": "^7.0.27",
         "postcss-assets": "^5.0.0",
         "postcss-cli": "^7.1.0",
