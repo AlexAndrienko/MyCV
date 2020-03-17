@@ -5,8 +5,10 @@ body {
     margin: 0;
     padding: 0;
     font-size: 16px;
+    color: #565656;
     background-color: darkgray;
     font-family: "Inconsolata", monospace;
+    line-height: 19.2px;
 }
 
 @page {
@@ -30,11 +32,6 @@ video {
 
 * {
     box-sizing: border-box;
-}
-
-b {
-    text-transform: uppercase;
-    font-size: 18px;
 }
 
 @define-mixin flex-container {
@@ -63,17 +60,22 @@ b {
     height: 297mm;
     position: relative;
     background-color: #fff;
+    padding: 20px;
 }
 
 .header {
     @mixin flex-container;
-    padding: 20px 15px 0 15px;
 
     &__name {
-        color: gray;
+        color: #000;
         font-size: 50px;
         width: 38%;
         font-weight: 700;
+
+        span {
+            display: inline-block;
+            line-height: 50px;
+        }
     }
 
     &__main-info {
@@ -127,35 +129,54 @@ b {
     @mixin flex-container;
     padding: 0 15px 0 15px;
 
+    .section-title {
+        text-transform: uppercase;
+        font-size: 20px;
+        margin-bottom: 10px;
+    }
+
     .education {
-        width: 55%;
+        width: 60%;
         order: 0;
+
+        &__content {
+            b,
+            span {
+                display: inline-block;
+            }
+        }
+
+        &__paragraph {
+            width: 25%;
+            vertical-align: top;
+            text-transform: uppercase;
+        }
+
+        &__info {
+            width: 70%;
+            text-align: left;
+        }
     }
 
     .experience {
-        width: 55%;
+        width: 60%;
         order: 2;
         position: relative;
         top: -18rem;
     }
 
     .skills {
-        width: 40%;
+        width: 33%;
         order: 1;
-
-        #other-skills {
-            height: 500px;
-            width: 400px;
-        }
     }
 
     .hobbies {
         @mixin flex-container;
         justify-content: flex-start;
-        width: 40%;
+        width: 33%;
         order: 3;
 
-        &__title {
+        .section-title {
             width: 100%;
         }
 
@@ -175,8 +196,7 @@ b {
 }
 
 //ICONS
-
-@define-mixin icon $file, $fill: #000 {
+@define-mixin icon $file, $fill: #565656 {
     .icon-$(file) {
         @mixin bg-picture;
         height: 1rem;
@@ -185,16 +205,16 @@ b {
         background-image: svg-load(../images/$(file).svg, fill=$(fill));
     }
 }
-@mixin icon art;
+@mixin icon art, #565656;
 @mixin icon graduate-cap;
 @mixin icon fix;
 @mixin icon tick;
 @mixin icon puzzle;
-@mixin icon camera;
-@mixin icon clapperboard;
-@mixin icon gamepad;
-@mixin icon snowboard-race;
-@mixin icon bg1;
+@mixin icon camera, #565656;
+@mixin icon clapperboard, #565656;
+@mixin icon gamepad, #565656;
+@mixin icon snowboard-race, #565656;
+@mixin icon bg1, #000;
 @mixin icon placeholder, #fff;
 @mixin icon mail, #fff;
 @mixin icon phone, #fff;

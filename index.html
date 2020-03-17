@@ -12,13 +12,11 @@
 </head>
 
 <body>
-
     <script>
-
         document.addEventListener('DOMContentLoaded', (event) => {
             let scale = 30;
             // List of tags
-            let myWords = [
+            let tags = [
                 { word: "Java", size: scale * 1 },
                 { word: "J2EE", size: scale * 0.7 },
                 { word: "JSP", size: scale * 0.8 },
@@ -71,7 +69,7 @@
             // Wordcloud features that are different from one word to the other must be here
             let layout = d3.layout.cloud()
                 .size([width, height])
-                .words(myWords.map(function (d) { return { text: d.word, size: d.size }; }))
+                .words(tags.map(function (d) { return { text: d.word, size: d.size }; }))
                 .padding(2)        //space between words
                 .rotate(0)
                 .fontSize(function (d) { return d.size; })      // font size of words
@@ -84,43 +82,43 @@
             <header class="header">
                 <div class="icon-bg1 bg-image"></div>
                 <div class="header__name">
-                    Alexandr </br>
-                    Andrienko
+                    <span> Alexandr </span>
+                    <span> Andrienko</span>
                 </div>
                 <div class="header__main-info">
                     10 years’ experience of development and implementation of complex software solutions.
                 </div>
                 <div class="header__avatar"></div>
                 <div class="header__personal-info">
-                    <span>Ukraine/ Kiev</span>
+                    <span>Ukraine, Kiev</span>
                     <div class="icon-placeholder"></div>
                     <span> al3xandrienko@gmail.com</span>
                     <div class="icon-mail"></div>
                     <span>+380637900278</span>
                     <div class="icon-phone"></div>
                 </div>
-
-
                 <div class="bg-header"></div>
             </header>
-            <!-- <hr> -->
             <div class="content">
                 <section class="education">
-                    <div class="icon-graduate-cap"></div>
-                    <b>Education</b>
-                    <section>
-                        <h1><span>2013</span> - Specialist’s degree</h1>
-                        <div>
-                            National Technical University of Ukraine Department of Technical Cybernetics, Specialty
-                            ‘Flexible
-                            computerized systems and robotics’
-                        </div>
+                    <div class="section-title">
+                        <div class="icon-graduate-cap"></div>
+                        education
+                    </div>
+                    <section class="education__content">
+                        <b>National Technical University of Ukraine</b> </br>
+                        <span class="education__paragraph">Department</span>
+                        <span class="education__info">Informatics and Computer Science, Technical Cybernetics</span>
+                        <span class="education__paragraph">Specialty</span>
+                        <span class="education__info">‘Computer Science’ , ‘Flexible computerized systems and robotics’</span>
                     </section>
                 </section>
 
                 <section class="skills">
-                    <div class="icon-fix"></div>
-                    <b>Skills</b>
+                    <div class="section-title">
+                        <div class="icon-fix"></div>
+                        skills
+                    </div>
                     <ul>
                         <li>
                             EcmaScript 2019 (ES6+)
@@ -136,15 +134,21 @@
                         <li>Algorithms</li>
                     </ul>
 
-                    <b>Previously worked with</b>
+                    <div class="section-title">
+                        Previously worked with
+                    </div>
                     <div id="tag-cloud"></div>
                 </section>
 
                 <section class="experience">
-                    <!-- Freelancer 2008-2010 Freelance, Part-time (Ukraine, Kyiv)
+                    <!-- Freelancer 2008-2010 Freelance, (Ukraine, Kyiv)
         University work, open source projects and freelance -->
-                    <div class="icon-tick"></div>
-                    <b>Work Experience</b>
+                    <div class="section-title">
+                        <div class="icon-tick"></div>
+                        work experience
+                    </div>
+
+
                     <section class="job">
                         <div class="job__company">
                             <b>PNN (Ukraine/Kiev)</b> - <span>04/2010 - 05/2013</span>
@@ -200,9 +204,9 @@
                 </section>
 
                 <section class="hobbies">
-                    <div class="hobbies__title">
+                    <div class="section-title">
                         <div class="icon-puzzle"></div>
-                        <b>hobbies</b></br>
+                        hobbies
                     </div>
 
                     <figure>
