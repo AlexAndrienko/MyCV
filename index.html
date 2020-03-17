@@ -6,81 +6,13 @@
     <meta charset=utf-8 />
     <meta name=viewport content=width=device-width,initial-scale=1>
     <link rel=stylesheet type="text/css" href="./dist/index.css">
-
-    <script src="https://d3js.org/d3.v4.js"></script>
-    <script src="https://cdn.jsdelivr.net/gh/holtzy/D3-graph-gallery@master/LIB/d3.layout.cloud.js"></script>
 </head>
 
 <body>
-    <script>
-        document.addEventListener('DOMContentLoaded', (event) => {
-            let scale = 30;
-            // List of tags
-            let tags = [
-                { word: "Java", size: scale * 1 },
-                { word: "J2EE", size: scale * 0.7 },
-                { word: "JSP", size: scale * 0.8 },
-                { word: "Servlets", size: scale * 0.7 },
-                { word: "Struts", size: scale * 0.6 },
-                { word: "JSF", size: scale * 0.5 },
-                { word: "JDBC", size: scale * 0.6 },
-                { word: "JPA", size: scale * 0.4 },
-                { word: ".Net", size: scale * 0.3 },
-                { word: "ASP.Net", size: scale * 0.7 },
-                { word: "jQuery", size: scale * 1 },
-                { word: "XML", size: scale * 0.9 },
-                { word: "C#", size: scale * 0.9 },
-                { word: "MySQL", size: scale * 0.8 },
-                { word: "PostgreSQL", size: scale * 0.5 },
-            ]
-
-            // set the dimensions and margins of the graph
-            let margin = { top: 1, right: 1, bottom: 1, left: 1 },
-                width = 250 - margin.left - margin.right,
-                height = 200 - margin.top - margin.bottom;
-
-            // append the svg object to the body of the page
-            let svg = d3.select("#tag-cloud")
-                .append("svg")
-                .attr("width", width + margin.left + margin.right)
-                .attr("height", height + margin.top + margin.bottom)
-                .append("g")
-                .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
-
-            // This function takes the output of 'layout' above and draw the words
-            // Wordcloud features that are THE SAME from one word to the other can be here
-            const draw = (words) => {
-                svg
-                    .append("g")
-                    .attr("transform", "translate(" + layout.size()[0] / 2 + "," + layout.size()[1] / 2 + ")")
-                    .selectAll("text")
-                    .data(words)
-                    .enter().append("text")
-                    .style("font-size", function (d) { return d.size; })
-                    .style("fill", "#000")
-                    .attr("text-anchor", "middle")
-                    .style("font-family", "Inconsolata")
-                    .attr("transform", function (d) {
-                        return "translate(" + [d.x, d.y] + ")rotate(" + d.rotate + ")";
-                    })
-                    .text(function (d) { return d.text; });
-            }
-            // Constructs a new cloud layout instance. It run an algorithm to find the position of words that suits your requirements
-            // Wordcloud features that are different from one word to the other must be here
-            let layout = d3.layout.cloud()
-                .size([width, height])
-                .words(tags.map(function (d) { return { text: d.word, size: d.size }; }))
-                .padding(2)        //space between words
-                .rotate(0)
-                .fontSize(function (d) { return d.size; })      // font size of words
-                .on("end", draw);
-            layout.start();
-        })
-    </script>
     <div class="page-container">
         <div class="printable-page">
             <header class="header">
-                <div class="icon-bg1 bg-image"></div>
+                <div class="icon-bg2 bg-image"></div>
                 <div class="header__name">
                     <span> Alexandr </span>
                     <span> Andrienko</span>
@@ -99,33 +31,19 @@
                 </div>
                 <div class="bg-header"></div>
             </header>
-            <div class="content">
-                <section class="education">
-                    <div class="section-title">
-                        <div class="icon-graduate-cap"></div>
-                        education
-                    </div>
-                    <section class="education__content">
-                        <b>National Technical University of Ukraine</b> </br>
-                        <span class="education__paragraph">Department:</span>
-                        <span class="education__info">Informatics and Computer Science, Technical Cybernetics</span>
-                        <span class="education__paragraph">Specialty:</span>
-                        <span class="education__info">‘Computer Science’ , ‘Flexible computerized systems and
-                            robotics’</span>
-                    </section>
-                </section>
 
+            <div class="content">
                 <section class="skills">
                     <div class="section-title">
                         <div class="icon-fix"></div>
                         skills
                     </div>
-                    <ul>
+                    <ul class="skills__list">
                         <li>
                             EcmaScript 2019 (ES6+)
                         </li>
-                        <li>HTML 5</li>
-                        <li>CSS 3</li>
+                        <li>HTML5/ CSS3</li>
+                        <li>Node.JS</li>
                         <li>TypeScript</li>
                         <li>React</li>
                         <li>Redux</li>
@@ -140,76 +58,13 @@
                         Tools
                     </div>
                     <div>
-                        <p>Git, Hg, VSCode, Idea, SVN, WebPack, NPM, Windows, Linux, MasOS, Jira, Confluence</p>
+                        <p>Git, Hg, VSCode, Idea, SVN, WebPack, NPM, Windows, Linux, MasOS, Jira, Confluence, Gimp</p>
                     </div>
                     <div class="section-title">
                         <div class="icon-gear"></div>
-                        Previously worked
+                        other tech.
                     </div>
                     <div id="tag-cloud"></div>
-                </section>
-
-                <section class="experience">
-                    <!-- Freelancer 2008-2010 Freelance, (Ukraine, Kyiv)
-        University work, open source projects and freelance -->
-                    <div class="section-title">
-                        <div class="icon-tick"></div>
-                        work experience
-                    </div>
-
-
-                    <section class="job">
-                        <div class="job__company">
-                            <b>PNN (Ukraine/Kiev)</b> - <span>04/2010 - 05/2013</span>
-                        </div>
-                        <!-- //////////////////////////////////////// -->
-                        <div class="job__project">
-                            <h1 class="title">
-                                <b>SMS Analyzer</b> - <span class="position">Software Developer</span>
-                            </h1>
-                            <p class="description">
-                                Cross-platform solution provides high-load, scalable and secure functionality for
-                                processing
-                                of
-                                incoming SMS-s. Work services accept and analyze incoming SMS-s via SMPP protocol as
-                                SMS-s
-                                and
-                                send
-                                outgoing SMS-s.
-                            </p>
-                            <p class="role">Back End, Front End Developing.</p>
-                            <p class="thech">
-                                Java, C++, JSP, Struts, JDK 6, J2EE, JNI, XML, XSLT, HTML\DHTML, Ajax, RMI. Platforms &
-                                Databases:
-                                Linux Red Hat Enterprise 5, Apache 2.2, Tomcat 6, Postgre SQL 8.x, memcache, binary
-                                storage.
-                            </p>
-                        </div>
-                        <!-- //////////////////////////////////////// -->
-                        <div class="job__project">
-                            <h1 class="title">
-                                <b>SMS Analyzer</b> - <span class="position">Software Developer</span>
-                            </h1>
-                            <p class="description">
-                                Cross-platform solution provides high-load, scalable and secure functionality for
-                                processing
-                                of
-                                incoming SMS-s. Work services accept and analyze incoming SMS-s via SMPP protocol as
-                                SMS-s
-                                and
-                                send
-                                outgoing SMS-s.
-                            </p>
-                            <p class="role">Back End, Front End Developing.</p>
-                            <p class="thech">
-                                Java, C++, JSP, Struts, JDK 6, J2EE, JNI, XML, XSLT, HTML\DHTML, Ajax, RMI. Platforms &
-                                Databases:
-                                Linux Red Hat Enterprise 5, Apache 2.2, Tomcat 6, Postgre SQL 8.x, memcache, binary
-                                storage.
-                            </p>
-                        </div>
-                        <!-- //////////////////////////////////////// -->
-                    </section>
                 </section>
 
                 <section class="hobbies">
@@ -219,15 +74,15 @@
                     </div>
 
                     <figure>
-                        <div class="icon icon-art"></div>
-                        <figcaption>
-                            <span>Drawing/Art</span>
-                        </figcaption>
-                    </figure>
-                    <figure>
                         <div class="icon icon-camera"></div>
                         <figcaption>
                             <span>Photography</span>
+                        </figcaption>
+                    </figure>
+                    <figure>
+                        <div class="icon icon-gamepad"></div>
+                        <figcaption>
+                            <span>Gaming</span>
                         </figcaption>
                     </figure>
                     <figure>
@@ -237,26 +92,137 @@
                         </figcaption>
                     </figure>
                     <figure>
+                        <div class="icon icon-art"></div>
+                        <figcaption>
+                            <span>Drawing/Art</span>
+                        </figcaption>
+                    </figure>
+                    <figure>
                         <div class="icon icon-snowboard-race"></div>
                         <figcaption>
                             <span>Snowboarding</span>
                         </figcaption>
                     </figure>
-                    <figure>
-                        <div class="icon icon-gamepad"></div>
-                        <figcaption>
-                            <span>Gaming</span>
-                        </figcaption>
-                    </figure>
+
                 </section>
 
 
-                <!-- company - year project - role - description - Technical - Responsibilities project - role - description -
-        Technical - Responsibilities -->
+                <section class="education">
+                    <div class="section-title">
+                        <div class="icon-graduate-cap"></div>
+                        education
+                    </div>
+                    <section class="education__content">
+                        <b>National Technical University of Ukraine</b> </br>
+                        <!-- <span class="education__paragraph">Department:</span> -->
+                        <span class="education__info">Informatics and Computer Science, (FIOT) Technical
+                            Cybernetics</span>
+                        <!-- <span class="education__paragraph">Specialty:</span> -->
+                        <span class="education__info">Specialty ‘Computer Science’ , ‘Flexible computerized systems and
+                            robotics’</span>
+                    </section>
+                </section>
+
+
+                <section class="experience">
+                    <div class="section-title">
+                        <div class="icon-tick"></div>
+                        work experience
+                    </div>
+                    <section>
+                        <div class="experience__item">
+                            <span class="experience__item--left">
+                                <strong>Freelance</strong>
+                            </span>
+                            <span class="experience__item--right">01/2019 - present</span>
+                            <div class="experience__item__description">
+                                <ul>
+                                    <li>Developing Web and PWA applications</li>
+                                    <li>Electron, desktop applications development</li>
+                                    <li>React, Redux, TypeScript, WebPack, NPM, HTML5/CSS3</li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <div class="experience__item">
+                            <span class="experience__item--left">
+                                <strong> Luxoft, Ukraine/Kiev</strong>
+                            </span>
+                            <span class="experience__item--right">08/2013 - 09/2018</span>
+                            <div class="experience__item__description">
+                                <span class="m-upper">Team Lead/ Web Developer</span>
+                                <ul>
+                                    <li>Supprorting and developing new features of bank's main web-portal and plugins
+                                    </li>
+                                    <li>Managing team, planning development in Agile process</li>
+                                    <li>HTML5/CSS3, Typescript, React, Redux, JS Canvas, Doker</li>
+                                </ul>
+                            </div>
+                            <div class="experience__item__description">
+                                <span class="m-upper">Senior Web Developer</span>
+                                <ul>
+                                    <li>Designing and developing fully modular application with high level of
+                                        customization</li>
+                                    <li>Java, HTML5/CSS3, Typescript, React, Redux, RequireJS, Babel, npm</li>
+                                </ul>
+                            </div>
+                            <div class="experience__item__description">
+                                <span class="m-upper">Middle fullstack dev</span>
+                                <ul>
+                                    <li>Developing new functionality on existing derivative trading webb app</li>
+                                    <li>Java, Stripes, ST-JS, JQuery, HTML/CSS2</li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <div class="experience__item">
+                            <span class="experience__item--left">
+                                <strong> PNN, Ukraine/Kiev</strong>
+                            </span>
+                            <span class="experience__item--right">04/2010 - 06/2013</span>
+                            <span class="m-upper">Software developer</span>
+                            <ul>
+                                <li>Design and developing web application for photographers and publishers. </li>
+                                <li>C#, MSSQL, ASP.Net, JS, jQuery</li>
+                            </ul>
+                        </div>
+
+                        <div class="experience__item">
+                            <span class="experience__item--left">
+                                <strong> JSC VTB Bank Ukraine (Outstaff)</strong>
+                            </span>
+                            <span class="experience__item--right">09/2011 - 10/2012</span>
+                            <span class="m-upper">Software developer</span>
+                            <ul>
+                                <li>Integration with the Bank systems, Ldap, Hyperion </li>
+                                <li> Frontend development of primitive UI </li>
+                                <li>Java, IBM Process Server 7.0, ESB 7.0, IBM Portal 7.0, IBM HTTP, Oracle SQL Server
+                                    11
+                                </li>
+                            </ul>
+                        </div>
+
+                        <div class="experience__item">
+                            <span class="experience__item--left">
+                                <strong>University (KPI)</strong>
+                            </span>
+                            <span class="experience__item--right">10/2009 - 07/2010</span>
+                            <div class="experience__item__description">
+                                <ul>
+                                    <li>Developing university portal and infrastructure</li>
+                                    <li>ASP.Net, MS SQL, C#</li>
+                                </ul>
+                            </div>
+                        </div>
+
+                    </section>
+                </section>
             </div>
 
             <footer>
-                <div class="bg-footer"></div>
+                <div class="bg-footer">
+                    <div class="icon-bg3 bg-image"></div>
+                </div>
             </footer>
         </div>
     </div>
