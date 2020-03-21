@@ -20,6 +20,7 @@ body {
     body {
         width: 210mm;
         height: 297mm;
+        -webkit-print-color-adjust: exact;
     }
 }
 
@@ -50,9 +51,9 @@ video {
 }
 
 .page-container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    // display: flex;
+    // justify-content: center;
+    // align-items: center;
 }
 
 .printable-page {
@@ -63,9 +64,11 @@ video {
     background-color: #fff;
     padding: 20px 20px 20px 40px;
     overflow: hidden;
+
+    margin: 0 auto;
 }
 
-.m-upper{
+.m-upper {
     text-transform: uppercase;
 }
 
@@ -109,7 +112,6 @@ video {
         text-align: end;
         line-height: 2.5rem;
         z-index: 1;
-
     }
 
     .bg-image {
@@ -155,13 +157,12 @@ video {
         order: 3;
 
         &__item {
-
             &--left {
                 display: inline-block;
                 width: 58%;
                 text-align: left;
             }
-            
+
             &--right {
                 display: inline-block;
                 width: 38%;
@@ -190,7 +191,7 @@ video {
         p {
             margin: 0;
         }
-        #tag-cloud{
+        #tag-cloud {
             height: 160px;
         }
     }
@@ -222,7 +223,6 @@ video {
 }
 
 footer {
-
     .bg-image {
         position: absolute;
         bottom: 0;
