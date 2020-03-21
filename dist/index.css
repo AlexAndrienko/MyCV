@@ -1,5 +1,4 @@
 @import url(https://fonts.googleapis.com/css?family=Inconsolata:400,700&display=swap);
-
 html, body {
     margin: 0;
     padding: 0;
@@ -9,7 +8,6 @@ html, body {
     font-family: "Inconsolata", monospace;
     line-height: 19.2px;
 }
-
 @page {
     size: A4;
     margin: 0;
@@ -21,21 +19,12 @@ html, body {
         -webkit-print-color-adjust: exact;
     }
 }
-
 img, embed, object, video {
     max-width: 100%;
 }
-
 * {
     box-sizing: border-box;
 }
-
-.page-container {
-    /* display: flex;*/
-    /* justify-content: center;*/
-    /* align-items: center;*/
-}
-
 .printable-page {
     width: 210mm;
     min-width: 210mm;
@@ -44,14 +33,11 @@ img, embed, object, video {
     background-color: #fff;
     padding: 20px 20px 20px 40px;
     overflow: hidden;
-
     margin: 0 auto;
 }
-
 .m-upper {
     text-transform: uppercase;
 }
-
 .header {
     display: flex;
     flex-wrap: wrap;
@@ -60,19 +46,16 @@ img, embed, object, video {
     align-items: flex-start;
     align-content: flex-start;
 }
-
 .header__name {
         color: #000;
         font-size: 50px;
         width: 38%;
         font-weight: 700;
     }
-
 .header__name span {
             display: inline-block;
             line-height: 50px;
         }
-
 .header__main-info {
         display: block;
         order: 4;
@@ -82,7 +65,6 @@ img, embed, object, video {
         font-size: 20px;
         color: gray;
     }
-
 .header__avatar {
         background-position: center;
         background-repeat: no-repeat;
@@ -94,7 +76,6 @@ img, embed, object, video {
         border: 5px solid #fff;
         z-index: 1;
     }
-
 .header__personal-info {
         width: 30%;
         color: #fff;
@@ -102,7 +83,6 @@ img, embed, object, video {
         line-height: 2.5rem;
         z-index: 1;
     }
-
 .header .bg-image {
         position: absolute;
         top: 0;
@@ -110,7 +90,6 @@ img, embed, object, video {
         width: 560px;
         height: 216px;
     }
-
 .content {
     display: flex;
     flex-wrap: wrap;
@@ -122,70 +101,57 @@ img, embed, object, video {
     flex-flow: column wrap;
     justify-content: flex-start;
     align-content: space-between;
-
     position: relative;
     top: -60px;
     height: 250mm;
 }
-
 .content .section-title {
         text-transform: uppercase;
         font-size: 20px;
         margin: 30px 0 10px 0;
     }
-
 .content .education {
         width: 65%;
         order: 2;
     }
-
 .content .education__content b, .content .education__content span {
                 display: inline-block;
             }
-
 .content .experience {
         width: 65%;
         order: 3;
     }
-
 .content .experience__item--left {
                 display: inline-block;
                 width: 58%;
                 text-align: left;
             }
-
 .content .experience__item--right {
                 display: inline-block;
                 width: 38%;
                 text-align: right;
                 font-weight: 700;
             }
-
 .content .experience__item ul {
                 margin: 0;
                 padding-top: 5px;
                 padding-bottom: 5px;
             }
-
 .content .skills {
         width: 30%;
         order: 0;
     }
-
 .content .skills__list {
             font-weight: 700;
             margin: 0 0 20px 0;
             padding-left: 27px;
         }
-
 .content .skills p {
             margin: 0;
         }
-
 .content .skills #tag-cloud {
             height: 160px;
         }
-
 .content .hobbies {
         display: flex;
         flex-wrap: wrap;
@@ -197,11 +163,9 @@ img, embed, object, video {
         width: 30%;
         order: 1;
     }
-
 .content .hobbies .section-title {
             width: 100%;
         }
-
 .content .hobbies figure {
             text-align: center;
             font-size: 12px;
@@ -210,12 +174,10 @@ img, embed, object, video {
             margin: 15px 0;
             font-weight: bold;
         }
-
 .content .hobbies .icon {
             width: 1.5rem;
             height: 1.5rem;
         }
-
 footer .bg-image {
         position: absolute;
         bottom: 0;
@@ -223,7 +185,6 @@ footer .bg-image {
         width: 560px;
         height: 216px;
     }
-
 /*ICONS*/
 .icon-art {
         background-position: center;
@@ -268,7 +229,7 @@ footer .bg-image {
         height: 1rem;
         width: 1rem;
         display: inline-block;
-        background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg height='512pt' viewBox='0 -27 512.001 512' width='512pt' xmlns='http://www.w3.org/2000/svg' fill='%23565656'%3E%3Cpath d='m448.285156 329.226562 63.714844-63.710937-63.714844-63.714844 10.265625-10.265625c17.761719-17.761718 17.761719-46.660156.003907-64.421875-8.605469-8.601562-20.046876-13.339843-32.214844-13.339843-12.164063 0-23.605469 4.738281-32.207032 13.339843l-10.265624 10.265625-63.714844-63.714844-18.800782 18.804688v29.71875c33.257813 7.925781 58.066407 37.890625 58.066407 73.539062 0 35.652344-24.808594 65.617188-58.066407 73.539063v92.152344h-55.15625l-10.996093 10.996093 84.953125 84.949219 63.714844-63.714843 8.847656 8.851562c17.761718 17.761719 46.660156 17.761719 64.421875 0s17.761719-46.660156 0-64.421875zm0 0'/%3E%3Cpath d='m271.316406 331.386719v-90.105469h12.511719c25.121094 0 45.554687-20.433594 45.554687-45.554688 0-25.117187-20.433593-45.550781-45.554687-45.550781h-12.511719v-90.105469h-90.105468v-14.515624c0-25.121094-20.433594-45.554688-45.554688-45.554688-25.117188 0-45.550781 20.433594-45.550781 45.554688v14.515624h-90.105469v90.105469h12.515625c22.039063 0 40.46875 15.730469 44.65625 36.554688 1.816406 2.539062 2.898437 5.640625 2.898437 8.996093 0 3.355469-1.082031 6.457032-2.898437 9-4.1875 20.820313-22.617187 36.554688-44.65625 36.554688h-12.515625v90.105469h90.105469v-14.519531c0-25.117188 20.433593-45.550782 45.550781-45.550782 25.121094 0 45.554688 20.433594 45.554688 45.550782v14.519531zm0 0'/%3E%3C/svg%3E");
+        background-image: url("data:image/svg+xml;charset=utf-8,%3C?xml version='1.0' encoding='iso-8859-1'?%3E %3C!-- Generator: Adobe Illustrator 19.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0) --%3E %3Csvg version='1.1' id='Capa_1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' x='0px' y='0px' viewBox='0 0 512 512' style='enable-background:new 0 0 512 512;' xml:space='preserve' fill='%23565656'%3E %3Cg%3E %3Cg%3E %3Cpath d='M465.677,241.757c14.844,0,28.569,4.753,39.77,12.8V108.025h-139.88c8.046-11.2,12.8-24.926,12.8-39.77 C378.367,30.559,347.808,0,310.112,0c-37.696,0-68.255,30.559-68.255,68.255c0,14.844,4.754,28.569,12.8,39.77h-139.88v145.22 c-11.236-8.134-25.037-12.942-39.969-12.942c-37.696,0-68.255,30.559-68.255,68.255s30.559,68.255,68.255,68.255 c14.932,0,28.733-4.808,39.969-12.942V512h139.88c-8.047-11.2-12.8-24.926-12.8-39.77c0-37.696,30.559-68.255,68.255-68.255 c37.696,0,68.255,30.559,68.255,68.255c0,14.844-4.753,28.569-12.8,39.77h139.88V365.467c-11.2,8.047-24.926,12.8-39.77,12.8 c-37.696,0-68.255-30.559-68.255-68.255C397.422,272.316,427.981,241.757,465.677,241.757z'/%3E %3C/g%3E %3C/g%3E %3Cg%3E %3C/g%3E %3Cg%3E %3C/g%3E %3Cg%3E %3C/g%3E %3Cg%3E %3C/g%3E %3Cg%3E %3C/g%3E %3Cg%3E %3C/g%3E %3Cg%3E %3C/g%3E %3Cg%3E %3C/g%3E %3Cg%3E %3C/g%3E %3Cg%3E %3C/g%3E %3Cg%3E %3C/g%3E %3Cg%3E %3C/g%3E %3Cg%3E %3C/g%3E %3Cg%3E %3C/g%3E %3Cg%3E %3C/g%3E %3C/svg%3E");
     }
 .icon-camera {
         background-position: center;
