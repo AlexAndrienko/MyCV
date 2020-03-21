@@ -5,14 +5,13 @@ body {
     padding: 0;
     font-size: 16px;
     color: #565656;
-    background-color: darkgray;
     font-family: "Inconsolata", monospace;
     line-height: 19.2px;
 }
 
 @page {
-    size: A4;
-    margin: 0;
+	size: A4;
+	margin: 0;
 }
 
 @media print {
@@ -21,6 +20,11 @@ body {
         width: 210mm;
         height: 297mm;
         -webkit-print-color-adjust: exact;
+
+        .printable-page {
+            margin: 0;
+            box-shadow: 0;
+        }
     }
 }
 
@@ -50,15 +54,19 @@ video {
     background-size: cover;
 }
 
+div[size="A4"] {
+	width: 21cm;
+	min-width: 21cm;
+    height: 29.7cm;
+    padding: 20px 20px 20px 40px;
+}
+
 .printable-page {
-    width: 793px;
-    min-width: 792px;
-    height: 1122px;
     position: relative;
     background-color: #fff;
-    padding: 20px 20px 20px 40px;
     overflow: hidden;
-    margin: 0 auto;
+    margin: 0.5cm auto;
+	box-shadow: 0 0 0.5cm rgba(0, 0, 0, 0.5);
 }
 
 .m-upper {
