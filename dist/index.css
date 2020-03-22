@@ -1,4 +1,15 @@
-@import url(https://fonts.googleapis.com/css?family=Inconsolata:400, 700&display=swap);
+@font-face {
+    font-family: "Inconsolata";
+    font-weight: 400;
+    src: url("5ce18e70.ttf") format("truetype")
+}
+
+@font-face {
+    font-family: "Inconsolata";
+    font-weight: 700;
+    src: url("cb06ec73.ttf") format("truetype");
+}
+
 html, body {
     margin: 0;
     padding: 0;
@@ -7,10 +18,12 @@ html, body {
     font-family: "Inconsolata", monospace;
     line-height: 19.2px;
 }
+
 @page {
     size: A4;
     margin: 0;
 }
+
 @media print {
     html, body {
         width: 210mm;
@@ -23,6 +36,7 @@ html, body {
             box-shadow: 0;
         }
 }
+
 @media (min-width: 320px) and (max-width: 480px) {
     body {
         transform: scale(0.48);
@@ -31,18 +45,22 @@ html, body {
         overflow: hidden;
     }
 }
+
 img, embed, object, video {
     max-width: 100%;
 }
+
 * {
     box-sizing: border-box;
 }
+
 div[size="A4"] {
     width: 21cm;
     min-width: 21cm;
     height: 29.7cm;
     padding: 20px 20px 20px 40px;
 }
+
 .printable-page {
     position: relative;
     background-color: #fff;
@@ -51,9 +69,11 @@ div[size="A4"] {
     margin-bottom: 0.5cm;
     box-shadow: 0 0 0.5cm rgba(0, 0, 0, 0.5);
 }
+
 .m-upper {
     text-transform: uppercase;
 }
+
 .header {
     display: flex;
     flex-wrap: wrap;
@@ -62,6 +82,7 @@ div[size="A4"] {
     align-items: flex-start;
     align-content: flex-start;
 }
+
 .header__name {
         color: #000;
         font-size: 50px;
@@ -69,10 +90,12 @@ div[size="A4"] {
         font-weight: 700;
         text-shadow: 1px 1px 4px rgb(94, 91, 91);
     }
+
 .header__name span {
             display: inline-block;
             line-height: 50px;
         }
+
 .header__main-info {
         display: block;
         order: 4;
@@ -82,6 +105,7 @@ div[size="A4"] {
         font-size: 20px;
         color: gray;
     }
+
 .header__avatar {
         background-position: center;
         background-repeat: no-repeat;
@@ -93,6 +117,7 @@ div[size="A4"] {
         border: 5px solid #fff;
         z-index: 1;
     }
+
 .header__personal-info {
         width: 30%;
         color: #fff;
@@ -100,9 +125,11 @@ div[size="A4"] {
         line-height: 2.5rem;
         z-index: 1;
     }
+
 .header__personal-info .icon {
             vertical-align: text-bottom;
         }
+
 .header .bg-image {
         position: absolute;
         top: 0;
@@ -110,6 +137,7 @@ div[size="A4"] {
         width: 560px;
         height: 216px;
     }
+
 .content {
     display: flex;
     flex-wrap: wrap;
@@ -125,56 +153,68 @@ div[size="A4"] {
     top: -26px;
     height: 250mm;
 }
+
 .content .section-title {
         text-transform: uppercase;
         font-size: 20px;
         /* margin: 30px 0 10px 0;*/
         margin-bottom: 10px;
     }
+
 .content .education {
         width: 65%;
         height: 16%;
         order: 2;
     }
+
 .content .education__content b, .content .education__content span {
                 display: inline-block;
             }
+
 .content .experience {
         width: 65%;
         order: 3;
     }
+
 .content .experience__item--left {
                 display: inline-block;
                 width: 58%;
                 text-align: left;
             }
+
 .content .experience__item--right {
                 display: inline-block;
                 width: 38%;
                 text-align: right;
                 font-weight: 700;
             }
+
 .content .experience__item ul {
                 margin: 0;
                 padding-top: 5px;
                 padding-bottom: 5px;
             }
+
 .content .skills {
         width: 30%;
         height: 58%;
         order: 0;
     }
+
 .content .skills__list {
             font-weight: 700;
             margin: 0 0 20px 0;
             padding-left: 27px;
         }
+
 .content .skills p {
             margin: 0;
         }
+
 .content .skills #tag-cloud {
             height: 160px;
         }
+
 .content .hobbies {
         display: flex;
         flex-wrap: wrap;
@@ -183,13 +223,15 @@ div[size="A4"] {
         align-items: flex-start;
         align-content: flex-start;
         justify-content: flex-start;
-        width: 30%;    
+        width: 30%;
         height: 34%;
         order: 1;
     }
+
 .content .hobbies .section-title {
             width: 100%;
         }
+
 .content .hobbies figure {
             text-align: center;
             font-size: 12px;
@@ -198,10 +240,12 @@ div[size="A4"] {
             margin: 15px 0;
             font-weight: bold;
         }
+
 .content .hobbies .icon {
             width: 1.5rem;
             height: 1.5rem;
         }
+
 footer .bg-image {
         position: absolute;
         bottom: 0;
@@ -209,7 +253,9 @@ footer .bg-image {
         width: 560px;
         height: 216px;
     }
+
 /*ICONS*/
+
 .icon-art {
         background-position: center;
         background-repeat: no-repeat;
@@ -219,6 +265,7 @@ footer .bg-image {
         display: inline-block;
         background-image: url("data:image/svg+xml;charset=utf-8,%3C?xml version='1.0' encoding='iso-8859-1'?%3E %3C!-- Generator: Adobe Illustrator 16.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0) --%3E %3C!DOCTYPE svg PUBLIC '-//W3C//DTD SVG 1.1//EN' 'http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd'%3E %3Csvg version='1.1' id='Capa_1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' x='0px' y='0px' width='459px' height='459px' viewBox='0 0 459 459' style='enable-background:new 0 0 459 459;' xml:space='preserve' fill='%23565656'%3E %3Cg%3E %3Cg id='palette'%3E %3Cpath d='M229.5,0C102,0,0,102,0,229.5S102,459,229.5,459c20.4,0,38.25-17.85,38.25-38.25c0-10.2-2.55-17.85-10.2-25.5 c-5.1-7.65-10.2-15.3-10.2-25.5c0-20.4,17.851-38.25,38.25-38.25h45.9c71.4,0,127.5-56.1,127.5-127.5C459,91.8,357,0,229.5,0z M89.25,229.5c-20.4,0-38.25-17.85-38.25-38.25S68.85,153,89.25,153s38.25,17.85,38.25,38.25S109.65,229.5,89.25,229.5z M165.75,127.5c-20.4,0-38.25-17.85-38.25-38.25S145.35,51,165.75,51S204,68.85,204,89.25S186.15,127.5,165.75,127.5z M293.25,127.5c-20.4,0-38.25-17.85-38.25-38.25S272.85,51,293.25,51s38.25,17.85,38.25,38.25S313.65,127.5,293.25,127.5z M369.75,229.5c-20.4,0-38.25-17.85-38.25-38.25S349.35,153,369.75,153S408,170.85,408,191.25S390.15,229.5,369.75,229.5z'/%3E %3C/g%3E %3C/g%3E %3Cg%3E %3C/g%3E %3Cg%3E %3C/g%3E %3Cg%3E %3C/g%3E %3Cg%3E %3C/g%3E %3Cg%3E %3C/g%3E %3Cg%3E %3C/g%3E %3Cg%3E %3C/g%3E %3Cg%3E %3C/g%3E %3Cg%3E %3C/g%3E %3Cg%3E %3C/g%3E %3Cg%3E %3C/g%3E %3Cg%3E %3C/g%3E %3Cg%3E %3C/g%3E %3Cg%3E %3C/g%3E %3Cg%3E %3C/g%3E %3C/svg%3E");
     }
+
 .icon-graduate-cap {
         background-position: center;
         background-repeat: no-repeat;
@@ -228,6 +275,7 @@ footer .bg-image {
         display: inline-block;
         background-image: url("data:image/svg+xml;charset=utf-8,%3C?xml version='1.0' encoding='iso-8859-1'?%3E %3C!-- Generator: Adobe Illustrator 16.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0) --%3E %3C!DOCTYPE svg PUBLIC '-//W3C//DTD SVG 1.1//EN' 'http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd'%3E %3Csvg version='1.1' id='Capa_1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' x='0px' y='0px' width='561px' height='561px' viewBox='0 0 561 561' style='enable-background:new 0 0 561 561;' xml:space='preserve' fill='%23565656'%3E %3Cg%3E %3Cg id='school'%3E %3Cpath d='M102,311.1v102L280.5,510L459,413.1v-102L280.5,408L102,311.1z M280.5,51L0,204l280.5,153L510,232.05V408h51V204L280.5,51 z'/%3E %3C/g%3E %3C/g%3E %3Cg%3E %3C/g%3E %3Cg%3E %3C/g%3E %3Cg%3E %3C/g%3E %3Cg%3E %3C/g%3E %3Cg%3E %3C/g%3E %3Cg%3E %3C/g%3E %3Cg%3E %3C/g%3E %3Cg%3E %3C/g%3E %3Cg%3E %3C/g%3E %3Cg%3E %3C/g%3E %3Cg%3E %3C/g%3E %3Cg%3E %3C/g%3E %3Cg%3E %3C/g%3E %3Cg%3E %3C/g%3E %3Cg%3E %3C/g%3E %3C/svg%3E");
     }
+
 .icon-fix {
         background-position: center;
         background-repeat: no-repeat;
@@ -237,6 +285,7 @@ footer .bg-image {
         display: inline-block;
         background-image: url("data:image/svg+xml;charset=utf-8,%3C?xml version='1.0' encoding='iso-8859-1'?%3E %3C!-- Generator: Adobe Illustrator 16.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0) --%3E %3C!DOCTYPE svg PUBLIC '-//W3C//DTD SVG 1.1//EN' 'http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd'%3E %3Csvg version='1.1' id='Capa_1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' x='0px' y='0px' width='535.5px' height='535.5px' viewBox='0 0 535.5 535.5' style='enable-background:new 0 0 535.5 535.5;' xml:space='preserve' fill='%23565656'%3E %3Cg%3E %3Cg id='auto-fix'%3E %3Cpolygon points='165.75,91.8 229.5,127.5 193.799,63.75 229.5,0 165.75,35.7 102,0 137.7,63.75 102,127.5 '/%3E %3Cpolygon points='471.75,341.7 408,306 443.7,369.75 408,433.5 471.75,397.8 535.5,433.5 499.8,369.75 535.5,306 '/%3E %3Cpolygon points='535.5,0 471.75,35.7 408,0 443.7,63.75 408,127.5 471.75,91.8 535.5,127.5 499.8,63.75 '/%3E %3Cpath d='M341.7,135.15c-10.2-10.2-25.5-10.2-35.7,0L7.649,433.5c-10.2,10.2-10.2,25.5,0,35.7l58.65,58.649 c10.2,10.2,25.5,10.2,35.7,0L400.35,229.5c10.2-10.2,10.2-25.5,0-35.7L341.7,135.15z M313.65,275.4L260.1,221.85l61.2-61.2 l53.55,53.55L313.65,275.4z'/%3E %3C/g%3E %3C/g%3E %3Cg%3E %3C/g%3E %3Cg%3E %3C/g%3E %3Cg%3E %3C/g%3E %3Cg%3E %3C/g%3E %3Cg%3E %3C/g%3E %3Cg%3E %3C/g%3E %3Cg%3E %3C/g%3E %3Cg%3E %3C/g%3E %3Cg%3E %3C/g%3E %3Cg%3E %3C/g%3E %3Cg%3E %3C/g%3E %3Cg%3E %3C/g%3E %3Cg%3E %3C/g%3E %3Cg%3E %3C/g%3E %3Cg%3E %3C/g%3E %3C/svg%3E");
     }
+
 .icon-tick {
         background-position: center;
         background-repeat: no-repeat;
@@ -246,6 +295,7 @@ footer .bg-image {
         display: inline-block;
         background-image: url("data:image/svg+xml;charset=utf-8,%3C?xml version='1.0' encoding='iso-8859-1'?%3E %3C!-- Generator: Adobe Illustrator 16.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0) --%3E %3C!DOCTYPE svg PUBLIC '-//W3C//DTD SVG 1.1//EN' 'http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd'%3E %3Csvg version='1.1' id='Capa_1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' x='0px' y='0px' width='510px' height='510px' viewBox='0 0 510 510' style='enable-background:new 0 0 510 510;' xml:space='preserve' fill='%23565656'%3E %3Cg%3E %3Cg id='play-install'%3E %3Cpath d='M459,114.75H357v-51l-51-51H204l-51,51v51H51c-28.05,0-51,22.95-51,51v280.5c0,28.05,22.95,51,51,51h408 c28.05,0,51-22.95,51-51v-280.5C510,137.7,487.05,114.75,459,114.75z M204,63.75h102v51H204V63.75z M216.75,408l-89.25-89.25 l35.7-35.7l53.55,53.55L349.35,204l35.7,35.7L216.75,408z'/%3E %3C/g%3E %3C/g%3E %3Cg%3E %3C/g%3E %3Cg%3E %3C/g%3E %3Cg%3E %3C/g%3E %3Cg%3E %3C/g%3E %3Cg%3E %3C/g%3E %3Cg%3E %3C/g%3E %3Cg%3E %3C/g%3E %3Cg%3E %3C/g%3E %3Cg%3E %3C/g%3E %3Cg%3E %3C/g%3E %3Cg%3E %3C/g%3E %3Cg%3E %3C/g%3E %3Cg%3E %3C/g%3E %3Cg%3E %3C/g%3E %3Cg%3E %3C/g%3E %3C/svg%3E");
     }
+
 .icon-puzzle {
         background-position: center;
         background-repeat: no-repeat;
@@ -255,6 +305,7 @@ footer .bg-image {
         display: inline-block;
         background-image: url("data:image/svg+xml;charset=utf-8,%3C?xml version='1.0' encoding='iso-8859-1'?%3E %3C!-- Generator: Adobe Illustrator 19.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0) --%3E %3Csvg version='1.1' id='Capa_1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' x='0px' y='0px' viewBox='0 0 512 512' style='enable-background:new 0 0 512 512;' xml:space='preserve' fill='%23565656'%3E %3Cg%3E %3Cg%3E %3Cpath d='M465.677,241.757c14.844,0,28.569,4.753,39.77,12.8V108.025h-139.88c8.046-11.2,12.8-24.926,12.8-39.77 C378.367,30.559,347.808,0,310.112,0c-37.696,0-68.255,30.559-68.255,68.255c0,14.844,4.754,28.569,12.8,39.77h-139.88v145.22 c-11.236-8.134-25.037-12.942-39.969-12.942c-37.696,0-68.255,30.559-68.255,68.255s30.559,68.255,68.255,68.255 c14.932,0,28.733-4.808,39.969-12.942V512h139.88c-8.047-11.2-12.8-24.926-12.8-39.77c0-37.696,30.559-68.255,68.255-68.255 c37.696,0,68.255,30.559,68.255,68.255c0,14.844-4.753,28.569-12.8,39.77h139.88V365.467c-11.2,8.047-24.926,12.8-39.77,12.8 c-37.696,0-68.255-30.559-68.255-68.255C397.422,272.316,427.981,241.757,465.677,241.757z'/%3E %3C/g%3E %3C/g%3E %3Cg%3E %3C/g%3E %3Cg%3E %3C/g%3E %3Cg%3E %3C/g%3E %3Cg%3E %3C/g%3E %3Cg%3E %3C/g%3E %3Cg%3E %3C/g%3E %3Cg%3E %3C/g%3E %3Cg%3E %3C/g%3E %3Cg%3E %3C/g%3E %3Cg%3E %3C/g%3E %3Cg%3E %3C/g%3E %3Cg%3E %3C/g%3E %3Cg%3E %3C/g%3E %3Cg%3E %3C/g%3E %3Cg%3E %3C/g%3E %3C/svg%3E");
     }
+
 .icon-camera {
         background-position: center;
         background-repeat: no-repeat;
@@ -264,6 +315,7 @@ footer .bg-image {
         display: inline-block;
         background-image: url("data:image/svg+xml;charset=utf-8,%3C?xml version='1.0' encoding='iso-8859-1'?%3E %3C!-- Generator: Adobe Illustrator 16.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0) --%3E %3C!DOCTYPE svg PUBLIC '-//W3C//DTD SVG 1.1//EN' 'http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd'%3E %3Csvg version='1.1' id='Capa_1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' x='0px' y='0px' width='510px' height='510px' viewBox='0 0 510 510' style='enable-background:new 0 0 510 510;' xml:space='preserve' fill='%23565656'%3E %3Cg%3E %3Cg id='camera-alt'%3E %3Ccircle cx='255' cy='280.5' r='81.6'/%3E %3Cpath d='M178.5,25.5l-45.9,51H51c-28.05,0-51,22.95-51,51v306c0,28.05,22.95,51,51,51h408c28.05,0,51-22.95,51-51v-306 c0-28.05-22.95-51-51-51h-81.6l-45.9-51H178.5z M255,408c-71.4,0-127.5-56.1-127.5-127.5c0-71.4,56.1-127.5,127.5-127.5 c71.4,0,127.5,56.1,127.5,127.5C382.5,351.9,326.4,408,255,408z'/%3E %3C/g%3E %3C/g%3E %3Cg%3E %3C/g%3E %3Cg%3E %3C/g%3E %3Cg%3E %3C/g%3E %3Cg%3E %3C/g%3E %3Cg%3E %3C/g%3E %3Cg%3E %3C/g%3E %3Cg%3E %3C/g%3E %3Cg%3E %3C/g%3E %3Cg%3E %3C/g%3E %3Cg%3E %3C/g%3E %3Cg%3E %3C/g%3E %3Cg%3E %3C/g%3E %3Cg%3E %3C/g%3E %3Cg%3E %3C/g%3E %3Cg%3E %3C/g%3E %3C/svg%3E");
     }
+
 .icon-clapperboard {
         background-position: center;
         background-repeat: no-repeat;
@@ -273,6 +325,7 @@ footer .bg-image {
         display: inline-block;
         background-image: url("data:image/svg+xml;charset=utf-8,%3C?xml version='1.0' encoding='iso-8859-1'?%3E %3C!-- Generator: Adobe Illustrator 19.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0) --%3E %3Csvg version='1.1' id='Capa_1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' x='0px' y='0px' viewBox='0 0 511.816 511.816' style='enable-background:new 0 0 511.816 511.816;' xml:space='preserve' fill='%23565656'%3E %3Cg%3E %3Cg%3E %3Cpath d='M20.949,298.483v160c0,29.419,23.936,53.333,53.333,53.333h384c29.419,0,53.333-23.915,53.333-53.333v-160H20.949z'/%3E %3C/g%3E %3C/g%3E %3Cg%3E %3Cg%3E %3Cpolygon points='252.757,48.776 172.927,67.72 239.807,166.131 326.271,146.462 '/%3E %3C/g%3E %3C/g%3E %3Cg%3E %3Cg%3E %3Cpolygon points='150.741,72.99 64.703,93.384 130.879,190.878 217.471,171.187 '/%3E %3C/g%3E %3C/g%3E %3Cg%3E %3Cg%3E %3Cpath d='M511.274,93.086l-18.155-68.864c-4.181-16.747-21.333-27.285-38.251-23.424l-71.68,17.024l68.011,100.267l52.117-11.861 c2.837-0.64,5.269-2.411,6.763-4.885S511.999,95.902,511.274,93.086z'/%3E %3C/g%3E %3C/g%3E %3Cg%3E %3Cg%3E %3Cpolygon points='360.981,23.091 275.413,43.4 349.055,141.299 428.863,123.144 '/%3E %3C/g%3E %3C/g%3E %3Cg%3E %3Cg%3E %3Cpolygon points='128.447,191.838 94.314,277.15 178.005,277.15 212.138,191.838 '/%3E %3C/g%3E %3C/g%3E %3Cg%3E %3Cg%3E %3Cpolygon points='235.114,191.838 200.981,277.15 284.671,277.15 318.805,191.838 '/%3E %3C/g%3E %3C/g%3E %3Cg%3E %3Cg%3E %3Cpath d='M500.949,191.838h-52.501l-34.133,85.333h97.301v-74.667C511.615,196.595,506.858,191.838,500.949,191.838z'/%3E %3C/g%3E %3C/g%3E %3Cg%3E %3Cg%3E %3Cpolygon points='341.781,191.838 307.647,277.15 391.317,277.15 425.471,191.838 '/%3E %3C/g%3E %3C/g%3E %3Cg%3E %3Cg%3E %3Cpath d='M42.517,98.675l-17.387,4.117c-8.469,1.92-15.637,7.061-20.181,14.443c-4.544,7.403-5.888,16.107-3.776,24.533 l19.776,78.165v57.216h50.389l32.021-80.021l5.205-1.173L42.517,98.675z'/%3E %3C/g%3E %3C/g%3E %3Cg%3E %3C/g%3E %3Cg%3E %3C/g%3E %3Cg%3E %3C/g%3E %3Cg%3E %3C/g%3E %3Cg%3E %3C/g%3E %3Cg%3E %3C/g%3E %3Cg%3E %3C/g%3E %3Cg%3E %3C/g%3E %3Cg%3E %3C/g%3E %3Cg%3E %3C/g%3E %3Cg%3E %3C/g%3E %3Cg%3E %3C/g%3E %3Cg%3E %3C/g%3E %3Cg%3E %3C/g%3E %3Cg%3E %3C/g%3E %3C/svg%3E");
     }
+
 .icon-gamepad {
         background-position: center;
         background-repeat: no-repeat;
@@ -282,6 +335,7 @@ footer .bg-image {
         display: inline-block;
         background-image: url("data:image/svg+xml;charset=utf-8,%3C?xml version='1.0' encoding='iso-8859-1'?%3E %3C!-- Generator: Adobe Illustrator 19.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0) --%3E %3Csvg version='1.1' id='Capa_1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' x='0px' y='0px' viewBox='0 0 511.999 511.999' style='enable-background:new 0 0 511.999 511.999;' xml:space='preserve' fill='%23565656'%3E %3Cg%3E %3Cg%3E %3Cg%3E %3Crect x='379.67' y='245.27' width='0.001' height='0.001'/%3E %3Cpath d='M511.5,421.331l-20.988-182.924c-3.493-50.017-45.429-89.14-95.64-89.14c-27.837,0-53.602,11.702-71.804,32.359H271 V69.327c0-15.255,12.411-27.668,27.668-27.668c15.255,0,27.667,12.411,27.667,27.668v37.396h68.336V76.722h-38.335v-7.395 c0-31.799-25.87-57.669-57.668-57.669s-57.669,25.87-57.669,57.669v112.299h-52.069c-18.203-20.657-43.967-32.359-71.804-32.359 c-50.211,0-92.147,39.123-95.64,89.14L0.504,421.297c-2.408,20.038,3.892,40.188,17.285,55.287 c13.392,15.099,32.648,23.758,52.831,23.758h43.909l55.004-117.337h172.936l55.004,117.337h43.909 c20.182,0,39.438-8.659,52.831-23.757C507.596,461.494,513.897,441.358,511.5,421.331z M159.996,275.271h-27.668v27.668h-30 v-27.668H74.66V245.27h27.667v-27.668h30.001v27.668h27.668V275.271z M279.5,329.669h-47.001v-30.001H279.5V329.669z M437.338,275.271h-27.667v27.668h-30.001v-27.668h-27.668V245.27h27.667v-27.667h30.001v27.668h-30v30h30.001V245.27h27.667 V275.271z'/%3E %3C/g%3E %3C/g%3E %3C/g%3E %3Cg%3E %3C/g%3E %3Cg%3E %3C/g%3E %3Cg%3E %3C/g%3E %3Cg%3E %3C/g%3E %3Cg%3E %3C/g%3E %3Cg%3E %3C/g%3E %3Cg%3E %3C/g%3E %3Cg%3E %3C/g%3E %3Cg%3E %3C/g%3E %3Cg%3E %3C/g%3E %3Cg%3E %3C/g%3E %3Cg%3E %3C/g%3E %3Cg%3E %3C/g%3E %3Cg%3E %3C/g%3E %3Cg%3E %3C/g%3E %3C/svg%3E");
     }
+
 .icon-gear {
         background-position: center;
         background-repeat: no-repeat;
@@ -291,6 +345,7 @@ footer .bg-image {
         display: inline-block;
         background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg height='512pt' viewBox='-3 0 512 512' width='512pt' xmlns='http://www.w3.org/2000/svg' fill='%23565656'%3E%3Cpath d='m317.5 341.332031c1.089844-6.976562 1.621094-14.144531 1.621094-21.332031 0-7.148438-.53125-14.230469-1.597656-21.164062l35.261718-27.667969c8.277344-6.507813 10.5625-18.28125 5.3125-27.457031l-22.761718-39.421876c-5.292969-9.152343-16.660157-13.078124-26.453126-9.132812l-41.558593 16.746094c-11.347657-9.148438-23.660157-16.277344-36.691407-21.226563l-6.316406-44.371093c-1.492187-10.433594-10.558594-18.304688-21.121094-18.304688h-45.480468c-10.5625 0-19.628906 7.871094-21.121094 18.324219l-6.316406 44.394531c-13.054688 5.015625-25.492188 12.226562-36.519532 21.183594l-41.75-16.746094c-9.792968-3.925781-21.140624 0-26.433593 9.132812l-22.742188 39.421876c-5.289062 9.175781-2.984375 20.992187 5.355469 27.476562l35.222656 27.480469c-1.089844 6.976562-1.621094 14.144531-1.621094 21.332031 0 7.148438.53125 14.230469 1.597657 21.164062l-35.261719 27.667969c-8.277344 6.507813-10.558594 18.28125-5.3125 27.457031l22.742188 39.421876c5.289062 9.132812 16.660156 13.058593 26.453124 9.132812l41.558594-16.746094c11.347656 9.148438 23.65625 16.277344 36.691406 21.226563l6.316407 44.371093c1.511719 10.433594 10.578125 18.304688 21.140625 18.304688h45.480468c10.5625 0 19.628907-7.871094 21.121094-18.324219l6.316406-44.394531c13.054688-5.015625 25.492188-12.226562 36.519532-21.183594l41.75 16.746094c9.835937 3.945312 21.164062.019531 26.433594-9.132812l22.742187-39.421876c5.289063-9.175781 2.984375-20.992187-5.355469-27.476562zm-137.042969 53.335938c-41.175781 0-74.667969-33.496094-74.667969-74.667969s33.492188-74.667969 74.667969-74.667969c41.171875 0 74.664063 33.496094 74.664063 74.667969s-33.492188 74.667969-74.664063 74.667969zm0 0'/%3E%3Cpath d='m483.453125 116.671875c.40625-3.304687 1.003906-6.570313 1.003906-10.003906 0-3.4375-.597656-6.699219-1.003906-10.007813l19.222656-14.546875c4.285157-3.242187 5.480469-9.175781 2.792969-13.847656l-17.257812-29.867187c-2.6875-4.648438-8.429688-6.589844-13.378907-4.5l-22.121093 9.324218c-5.398438-4.117187-11.136719-7.746094-17.472657-10.390625l-2.941406-23.488281c-.683594-5.332031-5.207031-9.34375-10.582031-9.34375h-34.496094c-5.375 0-9.921875 4.011719-10.582031 9.34375l-2.945313 23.488281c-6.335937 2.644531-12.09375 6.292969-17.472656 10.390625l-22.121094-9.324218c-4.96875-2.089844-10.710937-.171876-13.398437 4.5l-17.234375 29.867187c-2.691406 4.652344-1.496094 10.582031 2.792968 13.847656l19.222657 14.546875c-.429688 3.308594-1.023438 6.570313-1.023438 10.007813 0 3.433593.59375 6.699219 1 10.003906l-19.21875 14.550781c-4.289062 3.242188-5.484375 9.171875-2.796875 13.84375l17.257813 29.867188c2.6875 4.652344 8.429687 6.589844 13.378906 4.5l22.121094-9.34375c5.398437 4.117187 11.136719 7.746094 17.472656 10.390625l2.941406 23.488281c.683594 5.355469 5.207031 9.363281 10.582031 9.363281h34.496094c5.378906 0 9.921875-4.007812 10.582032-9.34375l2.945312-23.488281c6.335938-2.644531 12.09375-6.292969 17.472656-10.386719l22.121094 9.320313c4.96875 2.089844 10.710938.171875 13.398438-4.5l17.234374-29.867188c2.691407-4.652344 1.496094-10.582031-2.792968-13.84375zm-78.996094 32.660156c-23.574219 0-42.667969-19.09375-42.667969-42.664062 0-23.574219 19.09375-42.667969 42.667969-42.667969 23.570313 0 42.664063 19.09375 42.664063 42.667969 0 23.570312-19.09375 42.664062-42.664063 42.664062zm0 0'/%3E%3C/svg%3E");
     }
+
 .icon-spanner {
         background-position: center;
         background-repeat: no-repeat;
@@ -300,6 +355,7 @@ footer .bg-image {
         display: inline-block;
         background-image: url("data:image/svg+xml;charset=utf-8,%3C?xml version='1.0' encoding='iso-8859-1'?%3E %3C!-- Generator: Adobe Illustrator 19.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0) --%3E %3Csvg version='1.1' id='Capa_1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' x='0px' y='0px' viewBox='0 0 433.102 433.102' style='enable-background:new 0 0 433.102 433.102;' xml:space='preserve' fill='%23565656'%3E %3Cg%3E %3Cg%3E %3Cpath d='M429.902,56.782c0-1.024-1.024-2.048-1.536-2.048c-1.024,0-2.048,0-2.56,0.512l-46.08,45.056L332.11,52.686l46.08-46.08 c1.024-1.024,1.024-2.56,0-3.584c-0.512-0.512-0.512-0.512-1.024-0.512c-34.816-7.68-70.656,2.56-96.768,26.624 c-24.576,24.576-18.432,53.248-14.336,72.192c0.512,2.56,1.024,5.632,1.536,7.68c-16.384,17.408-140.288,141.824-158.72,159.232 c-2.048-0.512-4.096-1.024-6.656-1.536c-18.944-4.608-46.592-11.264-72.192,13.824c-24.064,25.6-34.304,61.44-26.624,95.744 c0.512,1.536,1.536,2.048,3.072,2.048c0.512,0,1.024-0.512,1.024-0.512l46.08-45.056l47.616,47.616l-46.08,46.08 c-1.024,1.024-1.024,2.56,0,3.584c0.512,0.512,0.512,0.512,1.024,0.512c7.168,1.536,14.848,2.56,22.528,2.56 c27.648,0,54.272-10.24,74.24-29.696c24.576-24.576,18.432-53.248,14.336-72.192c-0.512-2.56-1.024-5.632-1.536-7.68 c16.384-17.408,140.288-141.824,158.72-159.232l6.656,1.536c18.432,4.608,47.104,11.776,72.192-13.312 C427.342,126.926,437.07,91.086,429.902,56.782z'/%3E %3C/g%3E %3C/g%3E %3Cg%3E %3C/g%3E %3Cg%3E %3C/g%3E %3Cg%3E %3C/g%3E %3Cg%3E %3C/g%3E %3Cg%3E %3C/g%3E %3Cg%3E %3C/g%3E %3Cg%3E %3C/g%3E %3Cg%3E %3C/g%3E %3Cg%3E %3C/g%3E %3Cg%3E %3C/g%3E %3Cg%3E %3C/g%3E %3Cg%3E %3C/g%3E %3Cg%3E %3C/g%3E %3Cg%3E %3C/g%3E %3Cg%3E %3C/g%3E %3C/svg%3E");
     }
+
 .icon-tools {
         background-position: center;
         background-repeat: no-repeat;
@@ -309,6 +365,7 @@ footer .bg-image {
         display: inline-block;
         background-image: url("data:image/svg+xml;charset=utf-8,%3C?xml version='1.0' encoding='iso-8859-1'?%3E %3C!-- Generator: Adobe Illustrator 19.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0) --%3E %3Csvg version='1.1' id='Capa_1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' x='0px' y='0px' viewBox='0 0 512.002 512.002' style='enable-background:new 0 0 512.002 512.002;' xml:space='preserve' fill='%23565656'%3E %3Cg%3E %3Cg%3E %3Cpath d='M153.557,89.912l10.605-10.605c6.91-6.91,5.451-18.465-2.886-23.467L80.931,7.631C59.837-4.996,33.001-1.7,15.672,15.673 C-1.701,33.032-4.997,59.868,7.63,80.932l48.208,80.332c5.008,8.347,16.62,9.794,23.467,2.886l10.62-10.605l81.154,81.03 l63.561-63.567L153.557,89.912z'/%3E %3C/g%3E %3C/g%3E %3Cg%3E %3Cg%3E %3Cpath d='M501.776,59.732c-4.407-9.245-16.77-11.547-24.141-4.146L438.831,94.39c-5.684,5.684-15.527,5.684-21.211,0 c-5.845-5.845-5.845-15.366,0-21.211l38.804-38.804c7.299-7.299,5.202-19.685-4.146-24.141 c-40.093-19.16-88.11-10.913-119.517,20.522c-28.843,28.828-38.159,71.675-24.683,109.512L140.259,308.081 c-37.808-13.477-80.669-4.16-109.512,24.683c-31.421,31.421-39.668,79.453-20.522,119.517c4.467,9.371,16.861,11.425,24.141,4.146 l38.804-38.804c5.859-5.83,15.381-5.845,21.211,0.015c5.843,5.813,5.886,15.279,0,21.196l-38.804,38.804 c-7.299,7.299-5.202,19.685,4.146,24.141c14.398,6.883,29.823,10.223,45.145,10.223c27.305,0,54.243-10.62,74.355-30.747 c28.857-28.828,38.159-71.675,24.683-109.512l167.822-167.811c37.793,13.462,80.669,4.16,109.526-24.683 C512.675,147.828,520.922,99.796,501.776,59.732z'/%3E %3C/g%3E %3C/g%3E %3Cg%3E %3Cg%3E %3Cpath d='M489.857,385.163c-50.919-50.732-78.834-70.888-138.525-117.309l-84.831,84.84 c41.958,53.86,67.365,88.599,115.016,136.267c15.586,15.586,36.299,22.857,56.675,22.857c14.956,0,29.722-3.551,42.129-12.471 c18.091-13.037,29.487-33.12,31.26-55.078C513.353,422.282,505.443,400.748,489.857,385.163z M446.652,446.713 c-5.972,5.44-15.277,4.918-20.989-0.794l-59.405-59.405c-5.712-5.712-6.234-15.017-0.794-20.989 c5.807-6.374,15.679-6.547,21.707-0.52l60,60C453.199,431.034,453.026,440.906,446.652,446.713z'/%3E %3C/g%3E %3C/g%3E %3Cg%3E %3C/g%3E %3Cg%3E %3C/g%3E %3Cg%3E %3C/g%3E %3Cg%3E %3C/g%3E %3Cg%3E %3C/g%3E %3Cg%3E %3C/g%3E %3Cg%3E %3C/g%3E %3Cg%3E %3C/g%3E %3Cg%3E %3C/g%3E %3Cg%3E %3C/g%3E %3Cg%3E %3C/g%3E %3Cg%3E %3C/g%3E %3Cg%3E %3C/g%3E %3Cg%3E %3C/g%3E %3Cg%3E %3C/g%3E %3C/svg%3E");
     }
+
 .icon-snowboard-race {
         background-position: center;
         background-repeat: no-repeat;
@@ -318,6 +375,7 @@ footer .bg-image {
         display: inline-block;
         background-image: url("data:image/svg+xml;charset=utf-8,%3C?xml version='1.0' encoding='iso-8859-1'?%3E %3C!-- Generator: Adobe Illustrator 17.1.0, SVG Export Plug-In . SVG Version: 6.00 Build 0) --%3E %3C!DOCTYPE svg PUBLIC '-//W3C//DTD SVG 1.1//EN' 'http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd'%3E %3Csvg version='1.1' id='Capa_1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' x='0px' y='0px' viewBox='0 0 281 281' style='enable-background:new 0 0 281 281;' xml:space='preserve' fill='%23565656'%3E %3Cpath d='M268.674,154.5l-49.5-66c-4.467-5.303-11.018-7.423-14.306-8.953c-17.091-7.956-34.817-11.623-53.62-13.079l-27.851-37.135 c-0.963-1.763-2.456-3.257-4.4-4.2l-3.319-1.61C101.488,16.639,85.652,13,69.881,13H57.674c-5.522,0-10,4.478-10,10s4.478,10,10,10 h12.207c5.978,0,11.966,0.654,17.825,1.913L72.144,45.172c-6.916,4.559-8.827,13.862-4.268,20.779 c1.065,1.616,2.392,2.954,3.884,4.005c-0.092,0.249-0.179,0.499-0.291,0.743c-1.341,2.929-3.9,5.063-7.021,5.855l-20.264,5.144 c-3.483,0.884-6.061,3.5-7.069,6.692L10.916,72.92C7.704,78.358,9.51,85.37,14.948,88.581l118.256,69.829 c0.573,0.339,1.167,0.609,1.769,0.838c-0.725,0.315-1.47,0.593-2.251,0.792l-29.239,7.422c-5.178,1.314-9.023,5.181-10.564,9.912 l-37.3-22.025l0,0c-4.633,7.847-2.029,17.964,5.818,22.597l170.639,100.76c7.847,4.634,17.964,2.029,22.597-5.818l-53.591-31.645 c1.277-1.494,2.281-3.265,2.905-5.26c10.458-33.396,2.911-69.319-19.621-95.571l24.16-16.107l36.146,48.195 c2.947,3.93,7.451,6.001,12.012,6.001c3.132,0,6.29-0.978,8.988-3.001C272.301,170.529,273.645,161.127,268.674,154.5z M108.631,75.766c-2.403-4.576-5.338-8.915-8.78-12.927l15.843-10.444L125.898,66h-3.224C116.234,66,110.757,70.067,108.631,75.766z M69.368,95.939c8.262-2.098,15.159-7.447,19.236-14.834c7.827,12.044,10.067,27.019,5.808,41.118l-38.66-22.828L69.368,95.939z M111.378,132.242c0.873-1.007,1.559-2.205,1.983-3.559c3.598-11.492,4.1-23.417,1.772-34.731c2.217,1.294,4.788,2.048,7.541,2.048 h16.89c8.752,0,17.506,0.963,26.068,2.82l-22.438,14.958c-10.34,6.894-13.134,20.863-6.241,31.202 c1.348,2.022,2.967,3.754,4.776,5.183L111.378,132.242z M121.015,193.963l19.089-4.845c11.765-2.986,21.638-10.485,27.648-20.854 c10.769,17.064,13.792,38.093,7.842,57.927L121.015,193.963z M219.174,66.75c0-13.669,11.081-24.75,24.75-24.75 s24.75,11.081,24.75,24.75s-11.081,24.75-24.75,24.75S219.174,80.419,219.174,66.75z M125.342,17.152 C125.342,7.679,133.021,0,142.494,0c9.473,0,17.152,7.679,17.152,17.152c0,9.473-7.679,17.152-17.152,17.152 C133.021,34.305,125.342,26.625,125.342,17.152z'/%3E %3Cg%3E %3C/g%3E %3Cg%3E %3C/g%3E %3Cg%3E %3C/g%3E %3Cg%3E %3C/g%3E %3Cg%3E %3C/g%3E %3Cg%3E %3C/g%3E %3Cg%3E %3C/g%3E %3Cg%3E %3C/g%3E %3Cg%3E %3C/g%3E %3Cg%3E %3C/g%3E %3Cg%3E %3C/g%3E %3Cg%3E %3C/g%3E %3Cg%3E %3C/g%3E %3Cg%3E %3C/g%3E %3Cg%3E %3C/g%3E %3C/svg%3E");
     }
+
 .icon-bg1 {
         background-position: center;
         background-repeat: no-repeat;
@@ -327,6 +385,7 @@ footer .bg-image {
         display: inline-block;
         background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='410.5' height='199' fill='%23000'%3E%3Cpath d='M5 0s28 36 50 49 85 41 100 63 24 44 24 44 153 8 231.5 43V0'/%3E%3C/svg%3E");
     }
+
 .icon-bg2 {
         background-position: center;
         background-repeat: no-repeat;
@@ -336,6 +395,7 @@ footer .bg-image {
         display: inline-block;
         background-image: url("data:image/svg+xml;charset=utf-8,%3C?xml version='1.0' standalone='yes'?%3E%3Csvg xmlns='http://www.w3.org/2000/svg' width='410.5' height='199' style='zoom: 1;' visibility='visible' fill='%23000'%3E%3Cpolygon points='5,0 415,0 415,198 289,168 177,155 136,97 65,57 27,33' stroke='%23000000' id='polygon1' stroke-width='3px' fill='%23000000' transform=''/%3E%3C/svg%3E");
     }
+
 .icon-bg3 {
         background-position: center;
         background-repeat: no-repeat;
@@ -345,6 +405,7 @@ footer .bg-image {
         display: inline-block;
         background-image: url("data:image/svg+xml;charset=utf-8,%3C?xml version='1.0' standalone='yes'?%3E%3Csvg xmlns='http://www.w3.org/2000/svg' width='410.5' height='199' style='zoom: 1;' visibility='visible' fill='%23000'%3E%3Cpolygon points='0,127' stroke='%23000000' id='polygon1' stroke-width='3px' fill='%23ffffff' transform=''/%3E%3Cpolygon points='-1,90 1,195 400,198 371,173 71,143' stroke='%23000000' id='polygon2' stroke-width='3px' fill='%23000000' transform=''/%3E%3C/svg%3E");
     }
+
 .icon-placeholder {
         background-position: center;
         background-repeat: no-repeat;
@@ -354,6 +415,7 @@ footer .bg-image {
         display: inline-block;
         background-image: url("data:image/svg+xml;charset=utf-8,%3C?xml version='1.0' encoding='iso-8859-1'?%3E %3C!-- Generator: Adobe Illustrator 19.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0) --%3E %3Csvg version='1.1' id='Capa_1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' x='0px' y='0px' viewBox='0 0 426.667 426.667' style='enable-background:new 0 0 426.667 426.667;' xml:space='preserve' fill='%23fff'%3E %3Cg%3E %3Cg%3E %3Cpath d='M213.333,0C130.88,0,64,66.88,64,149.333c0,112,149.333,277.333,149.333,277.333s149.333-165.333,149.333-277.333 C362.667,66.88,295.787,0,213.333,0z M213.333,202.667c-29.44,0-53.333-23.893-53.333-53.333S183.893,96,213.333,96 s53.333,23.893,53.333,53.333S242.773,202.667,213.333,202.667z'/%3E %3C/g%3E %3C/g%3E %3Cg%3E %3C/g%3E %3Cg%3E %3C/g%3E %3Cg%3E %3C/g%3E %3Cg%3E %3C/g%3E %3Cg%3E %3C/g%3E %3Cg%3E %3C/g%3E %3Cg%3E %3C/g%3E %3Cg%3E %3C/g%3E %3Cg%3E %3C/g%3E %3Cg%3E %3C/g%3E %3Cg%3E %3C/g%3E %3Cg%3E %3C/g%3E %3Cg%3E %3C/g%3E %3Cg%3E %3C/g%3E %3Cg%3E %3C/g%3E %3C/svg%3E");
     }
+
 .icon-mail {
         background-position: center;
         background-repeat: no-repeat;
@@ -363,6 +425,7 @@ footer .bg-image {
         display: inline-block;
         background-image: url("data:image/svg+xml;charset=utf-8,%3C?xml version='1.0' encoding='iso-8859-1'?%3E %3C!-- Generator: Adobe Illustrator 16.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0) --%3E %3C!DOCTYPE svg PUBLIC '-//W3C//DTD SVG 1.1//EN' 'http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd'%3E %3Csvg version='1.1' id='Capa_1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' x='0px' y='0px' width='510px' height='510px' viewBox='0 0 510 510' style='enable-background:new 0 0 510 510;' xml:space='preserve' fill='%23fff'%3E %3Cg%3E %3Cg id='email'%3E %3Cpath d='M459,51H51C22.95,51,0,73.95,0,102v306c0,28.05,22.95,51,51,51h408c28.05,0,51-22.95,51-51V102 C510,73.95,487.05,51,459,51z M459,153L255,280.5L51,153v-51l204,127.5L459,102V153z'/%3E %3C/g%3E %3C/g%3E %3Cg%3E %3C/g%3E %3Cg%3E %3C/g%3E %3Cg%3E %3C/g%3E %3Cg%3E %3C/g%3E %3Cg%3E %3C/g%3E %3Cg%3E %3C/g%3E %3Cg%3E %3C/g%3E %3Cg%3E %3C/g%3E %3Cg%3E %3C/g%3E %3Cg%3E %3C/g%3E %3Cg%3E %3C/g%3E %3Cg%3E %3C/g%3E %3Cg%3E %3C/g%3E %3Cg%3E %3C/g%3E %3Cg%3E %3C/g%3E %3C/svg%3E");
     }
+
 .icon-phone {
         background-position: center;
         background-repeat: no-repeat;
