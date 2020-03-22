@@ -59,6 +59,7 @@ div[size="A4"] {
         font-size: 50px;
         width: 38%;
         font-weight: 700;
+        text-shadow: 4px 5px 8px rgb(94, 91, 91);
     }
 .header__name span {
             display: inline-block;
@@ -91,6 +92,9 @@ div[size="A4"] {
         line-height: 2.5rem;
         z-index: 1;
     }
+.header__personal-info .icon {
+            vertical-align: text-bottom;
+        }
 .header .bg-image {
         position: absolute;
         top: 0;

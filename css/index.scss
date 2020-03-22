@@ -81,6 +81,8 @@ div[size="A4"] {
         font-size: 50px;
         width: 38%;
         font-weight: 700;
+        text-shadow: 4px 4px 8px rgb(94, 91, 91
+
         span {
             display: inline-block;
             line-height: 50px;
@@ -110,6 +112,10 @@ div[size="A4"] {
         text-align: end;
         line-height: 2.5rem;
         z-index: 1;
+
+        .icon {
+            vertical-align: text-bottom;
+        }
     }
     .bg-image {
         position: absolute;
