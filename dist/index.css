@@ -24,10 +24,10 @@ html, body {
         }
 }
 @media (min-width: 320px) and (max-width: 480px) {
-    /*CSS*/
     body {
         transform: scale(0.48);
         transform-origin: 0 0;
+        font-size: 95%;
         overflow: hidden;
     }
 }
