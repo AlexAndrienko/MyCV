@@ -59,7 +59,7 @@ div[size="A4"] {
         font-size: 50px;
         width: 38%;
         font-weight: 700;
-        text-shadow: 2px 2px 4px rgb(94, 91, 91);
+        text-shadow: 1px 1px 4px rgb(94, 91, 91);
     }
 .header__name span {
             display: inline-block;
