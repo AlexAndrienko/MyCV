@@ -1,7 +1,7 @@
 @font-face {
     font-family: "Inconsolata";
     font-weight: 400;
-    src: url("5ce18e70.ttf") format("truetype");
+    src: url("5ce18e70.ttf") format("truetype")
 }
 
 @font-face {
@@ -17,6 +17,8 @@ html, body {
     color: #565656;
     font-family: "Inconsolata", monospace;
     line-height: 19.2px;
+    font-size: 100%;
+    text-decoration: none;
 }
 
 @page {
@@ -41,6 +43,7 @@ html, body {
     body {
         transform: scale(0.48);
         transform-origin: 0 0;
+        font-size: 100%;
         overflow: hidden;
     }
 }
