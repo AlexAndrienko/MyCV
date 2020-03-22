@@ -18,7 +18,7 @@ html, body {
     font-family: "Inconsolata", monospace;
     line-height: 19.2px;
     font-size: 100%;
-    text-decoration: none;
+    text-decoration: none !important;
 }
 
 @page {
@@ -152,14 +152,14 @@ div[size="A4"] {
     justify-content: flex-start;
     align-content: space-between;
     position: relative;
-    top: -26px;
+    top: -60px;
     height: 250mm;
 }
 
 .content .section-title {
         text-transform: uppercase;
         font-size: 20px;
-        /* margin: 30px 0 10px 0;*/
+        margin: 30px 0 10px 0;
         margin-bottom: 10px;
     }
 
@@ -199,7 +199,7 @@ div[size="A4"] {
 
 .content .skills {
         width: 30%;
-        height: 58%;
+        height: 63%;
         order: 0;
     }
 
