@@ -1,7 +1,7 @@
 @font-face {
     font-family: "Inconsolata";
     font-weight: 400;
-    src: url("5ce18e70.ttf") format("truetype")
+    src: url("5ce18e70.ttf") format("truetype");
 }
 
 @font-face {
@@ -41,7 +41,6 @@ html, body {
     body {
         transform: scale(0.48);
         transform-origin: 0 0;
-        font-size: 85%;
         overflow: hidden;
     }
 }
