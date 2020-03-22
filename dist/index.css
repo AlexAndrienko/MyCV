@@ -1,4 +1,4 @@
-@import url(https://fonts.googleapis.com/css?family=Inconsolata:400,700&display=swap);
+@import url(https://fonts.googleapis.com/css?family=Inconsolata:400, 700&display=swap);
 html, body {
     margin: 0;
     padding: 0;
@@ -8,8 +8,8 @@ html, body {
     line-height: 19.2px;
 }
 @page {
-	size: A4;
-	margin: 0;
+    size: A4;
+    margin: 0;
 }
 @media print {
     html, body {
@@ -23,6 +23,14 @@ html, body {
             box-shadow: 0;
         }
 }
+@media (min-width: 320px) and (max-width: 480px) {
+    /*CSS*/
+    body {
+        transform: scale(0.48);
+        transform-origin: 0 0;
+        overflow: hidden;
+    }
+}
 img, embed, object, video {
     max-width: 100%;
 }
@@ -30,8 +38,8 @@ img, embed, object, video {
     box-sizing: border-box;
 }
 div[size="A4"] {
-	width: 21cm;
-	min-width: 21cm;
+    width: 21cm;
+    min-width: 21cm;
     height: 29.7cm;
     padding: 20px 20px 20px 40px;
 }
@@ -41,7 +49,7 @@ div[size="A4"] {
     overflow: hidden;
     margin: 0 auto;
     margin-bottom: 0.5cm;
-	box-shadow: 0 0 0.5cm rgba(0, 0, 0, 0.5);
+    box-shadow: 0 0 0.5cm rgba(0, 0, 0, 0.5);
 }
 .m-upper {
     text-transform: uppercase;
