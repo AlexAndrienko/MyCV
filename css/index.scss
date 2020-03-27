@@ -225,9 +225,11 @@ div[size="A4"] {
         width: 30%;
         height: 34%;
         order: 1;
+
         .section-title {
             width: 100%;
         }
+
         figure {
             text-align: center;
             font-size: 12px;
@@ -235,7 +237,9 @@ div[size="A4"] {
             padding: 0;
             margin: 15px 0;
             font-weight: bold;
+            text-transform: capitalize;
         }
+
         .icon {
             width: 1.5rem;
             height: 1.5rem;
