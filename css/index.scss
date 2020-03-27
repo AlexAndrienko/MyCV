@@ -1,7 +1,9 @@
+@import "./icons.scss";
+
 @font-face {
     font-family: "Inconsolata";
     font-weight: 400;
-    src: url("../font/Inconsolata-Regular.ttf") format("truetype")
+    src: url("../font/Inconsolata-Regular.ttf") format("truetype");
 }
 
 @font-face {
@@ -32,6 +34,7 @@ body {
     body {
         width: 210mm;
         height: 297mm;
+        transform: scale(1);
         -webkit-print-color-adjust: exact;
 
         .printable-page {
@@ -68,12 +71,6 @@ video {
     justify-content: space-between;
     align-items: flex-start;
     align-content: flex-start;
-}
-
-@define-mixin bg-picture {
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
 }
 
 div[size="A4"] {
@@ -121,11 +118,13 @@ div[size="A4"] {
         color: gray;
     }
     &__avatar {
-        @mixin bg-picture;
         width: 10rem;
         height: 10rem;
         border-radius: 50%;
         background-image: inline("IMG_1407.JPG");
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
         border: 5px solid #fff;
         z-index: 1;
     }
@@ -210,9 +209,12 @@ div[size="A4"] {
             margin: 0 0 20px 0;
             padding-left: 27px;
         }
-        p {
-            margin: 0;
+
+        &__tools {
+            word-spacing: 4px;
+            text-align: justify;
         }
+
         #tag-cloud {
             height: 160px;
         }
@@ -250,32 +252,3 @@ footer {
         height: 216px;
     }
 }
-
-//ICONS
-@define-mixin icon $file, $fill: #565656 {
-    .icon-$(file) {
-        @mixin bg-picture;
-        height: 1rem;
-        width: 1rem;
-        display: inline-block;
-        background-image: svg-load(../images/$(file).svg, fill=$(fill));
-    }
-}
-@mixin icon art, #565656;
-@mixin icon graduate-cap;
-@mixin icon fix;
-@mixin icon tick;
-@mixin icon puzzle;
-@mixin icon camera, #565656;
-@mixin icon clapperboard, #565656;
-@mixin icon gamepad, #565656;
-@mixin icon gear, #565656;
-@mixin icon spanner, #565656;
-@mixin icon tools, #565656;
-@mixin icon snowboard-race, #565656;
-@mixin icon bg1, #000;
-@mixin icon bg2, #000;
-@mixin icon bg3, #000;
-@mixin icon placeholder, #fff;
-@mixin icon mail, #fff;
-@mixin icon phone, #fff;
