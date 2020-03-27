@@ -10,19 +10,19 @@
         background-image: svg-load(../images/$(file).svg, fill=$(fill));
     }
 }
-@mixin icon art, #565656;
 @mixin icon graduate-cap;
 @mixin icon fix;
 @mixin icon tick;
 @mixin icon puzzle;
+@mixin icon drums;
 @mixin icon camera, #565656;
+@mixin icon art, #565656;
+@mixin icon snowboard-race, #565656;
 @mixin icon clapperboard, #565656;
 @mixin icon gamepad, #565656;
 @mixin icon gear, #565656;
 @mixin icon spanner, #565656;
 @mixin icon tools, #565656;
-@mixin icon drums;
-@mixin icon snowboard-race, #565656;
 @mixin icon bg1, #000;
 @mixin icon bg2, #000;
 @mixin icon bg3, #000;
