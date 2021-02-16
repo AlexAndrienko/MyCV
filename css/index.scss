@@ -91,6 +91,7 @@ div[size="A4"] {
 
 .m-upper {
     text-transform: uppercase;
+    font-size: 14px
 }
 
 .header {
@@ -114,7 +115,7 @@ div[size="A4"] {
         width: 43%;
         position: relative;
         top: -3rem;
-        font-size: 20px;
+        font-size: 16px;
         color: gray;
     }
     &__avatar {
@@ -161,24 +162,24 @@ div[size="A4"] {
     .section-title {
         text-transform: uppercase;
         font-size: 20px;
-        margin: 30px 0 10px 0;
-        margin-bottom: 10px;
+        margin: 25px 0 10px 0;
     }
 
     .education {
-        width: 65%;
-        height: 16%;
+        width: 67%;
+        height: 12%;
         order: 2;
 
         &__content {
             b,
             span {
                 display: inline-block;
+                font-size: 14px;
             }
         }
     }
     .experience {
-        width: 65%;
+        width: 67%;
         order: 3;
         &__item {
             &--left {
@@ -196,6 +197,7 @@ div[size="A4"] {
                 margin: 0;
                 padding-top: 5px;
                 padding-bottom: 5px;
+                font-size: 14px;
             }
         }
     }
