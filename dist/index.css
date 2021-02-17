@@ -297,6 +297,10 @@ div[size="A4"] {
 .header__personal-info .icon {
             vertical-align: text-bottom;
         }
+.header__personal-info a {
+            color: #fff;
+            text-decoration: none;
+        }
 .header .bg-image {
         position: absolute;
         top: 0;
@@ -323,7 +327,6 @@ div[size="A4"] {
         text-transform: uppercase;
         font-size: 20px;
         margin: 25px 0 10px 0;
-        /* margin-bottom: 10px;*/
     }
 .content .education {
         width: 67%;
