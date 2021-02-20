@@ -320,7 +320,7 @@ div[size="A4"] {
     justify-content: flex-start;
     align-content: space-between;
     position: relative;
-    top: -60px;
+    top: -40px;
     height: 250mm;
 }
 .content .section-title {
@@ -353,9 +353,7 @@ div[size="A4"] {
                 font-weight: 700;
             }
 .content .experience__item ul {
-                margin: 0;
-                padding-top: 5px;
-                padding-bottom: 5px;
+                margin: 3px 0 2px 0 ;
                 font-size: 14px;
             }
 .content .skills {
