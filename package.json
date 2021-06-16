@@ -13,7 +13,7 @@
     "devDependencies": {
         "autoprefixer": "^9.7.4",
         "html-inline": "^1.2.0",
-        "postcss": "^7.0.27",
+        "postcss": "^7.0.36",
         "postcss-assets": "^5.0.0",
         "postcss-cli": "^7.1.0",
         "postcss-extend": "^1.0.5",
